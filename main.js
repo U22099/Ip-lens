@@ -1,24 +1,25 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import './style.css';
+//Leave this file except for MUIZ and I
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+const token="89d4c270ab87af";
 
-setupCounter(document.querySelector('#counter'))
+async function test(){
+  const res = await fetch(`https://ipinfo.io/?token=${token}`);
+  const data = await res.json();
+  console.log(data);
+}
+//test();
+/*
+Output example
+
+{
+  "ip": "0.0.0.0",
+  "city": "Lagos",
+  "region": "Lagos",
+  "country": "NG",
+  "loc": "8.521,92.647",
+  "org": "AS65152 MTN NIGERIA Communication limited",
+  "timezone": "Africa/Lagos"
+}
+
+*/
