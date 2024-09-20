@@ -1,4 +1,4 @@
-## IP Address Tracker
+## IP Lens
 
 This project is a simple IP address tracker built using Vite and vanilla JavaScript.
 

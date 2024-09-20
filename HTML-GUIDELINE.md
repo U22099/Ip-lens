@@ -4,7 +4,7 @@
 
 #body
 div
-  -h1-/h1 (Ip Tracker) (class: header)
+  -h1-/h1 (Ip Lens) (class: header)
   -div
     -input&/input (class: input)
     -button-/button (\>)
