@@ -1,7 +1,7 @@
 #Guideline for MJ (html)
 
 > To see a formatted version of this click the preview button in your vscode you’ll usually find the preview button at the bottom of the editor window. It’s usually a tab labeled “Preview” or an icon that looks like an eye.
-
+```
 #body
 div
   -h1-/h1 (Ip Lens) (class: header)
@@ -26,6 +26,6 @@ div
   -/div
 /div
 #/body
-
+```
 
 >EOC (End Of Code)
