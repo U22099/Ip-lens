@@ -4,10 +4,10 @@
 ```
 #body
 div
-  -h1-/h1 (Ip Lens) (class: header)
+  -h1-/h1 (IP Lens) (class: "header")
   -div
-    -input&/input (class: input)
-    -button-/button (\>)
+    -input&/input (class: "input")
+    -button-/button (>)
   -/div
   -div
     -h1-/h1 (IP)
