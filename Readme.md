@@ -18,12 +18,16 @@ This project is a simple IP address tracker built using Vite and vanilla JavaScr
 1. **Clone the repository:**
    ```bash
    git clone <repository-url>
-Navigate to the project directory:
-cd ip-address-tracker
-Install dependencies:
-npm install
-Start the development server:
-npm run dev
-Open http://localhost:5173 in your browser to view the application.
-Development
+2. **Navigate to the project directory:**
+   ```bash
+   cd ip-address-tracker
+4. **Install dependencies:**
+   ```bash
+   npm install
+5. **Start the development server:**
+   ```bash
+   npm run dev
+6. **Open http://localhost:5173 in your browser to view the application.**
+
+## Development
 The project uses Vite for fast development and hot module replacement. You can modify the code in the src folder and save your changes. Vite will automatically rebuild the application and refresh the browser.
