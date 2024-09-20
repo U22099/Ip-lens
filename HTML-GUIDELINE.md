@@ -4,9 +4,9 @@
 
 #body
 div
-  -h1-/h1 (Ip Tracker);
+  -h1-/h1 (Ip Tracker) (class: "header")
   -div
-    -input-/input
+    -input-/input (class: input)
     -button-/button (\>)
   -/div
   -div
