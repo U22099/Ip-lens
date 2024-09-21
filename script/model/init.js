@@ -1,5 +1,5 @@
 import fetchIP from "./fetchIP";
-import validateIP from "./validateIP";
+import handleData from "./handleData";
 
 export default class Model{
   async fetch(IP){
@@ -9,13 +9,13 @@ export default class Model{
       if(!data){
        return {error: "An error occured please try again"}
       }
-      return data;
+      return handleData(data);
     } else {
-      return {error: "IP is invalid"}
+      return {error: "IP may be invalid"}
     }
   }
-  test(){
-    console.log("test");
-    return validateIP("2.152.255.1");
+  async test(){
+    const data = await fetchIP("2a00:1450:4000:802::2001");
+    console.log(handleData(data))
   }
 }

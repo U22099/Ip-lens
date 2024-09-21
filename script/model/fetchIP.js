@@ -1,6 +1,6 @@
 export default async function fetchIP(IP = null){
   try{
-    const token = "736649484";
+    const token = "89d4c270ab87af";
     let url;
     if(!IP){
       url = `https://ipinfo.io/?token=${token}`;
