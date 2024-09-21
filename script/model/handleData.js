@@ -5,7 +5,7 @@ export default function handleData(data){
   if(data.bogon){
     showToast("warning", "Bogon IP", "IP is not accessible on internet");
     return data
-  } else if(data.error.includes("ip")){
+  } else if(data.error){
     showToast("error", "Invalid IP", "IP is invalid");
     return null
   } else {
