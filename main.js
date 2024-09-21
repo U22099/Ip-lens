@@ -1,25 +1,9 @@
 import './style.css';
-//Leave this file except for MUIZ and I
+import Model from "./model/init.js";
+import View from "./view/init.js";
+import Controller from "./controller/init.js";
 
-const token="89d4c270ab87af";
-
-async function test(){
-  const res = await fetch(`https://ipinfo.io/?token=${token}`);
-  const data = await res.json();
-  console.log(data);
-}
-//test();
-/*
-Output example
-
-{
-  "ip": "0.0.0.0",
-  "city": "Lagos",
-  "region": "Lagos",
-  "country": "NG",
-  "loc": "8.521,92.647",
-  "org": "AS65152 MTN NIGERIA Communication limited",
-  "timezone": "Africa/Lagos"
-}
-
-*/
+//Initialising the model, view and controller classes
+const model = new Model();
+const view = new View();
+const controller = new Controller(model, view);
