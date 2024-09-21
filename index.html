@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="A ip address tracker created by a team of 5 as demo project in preparation for the student hack team hackathon" />
     <title>Ip Lens</title>
-    <script type="module" crossorigin src="/assets/index-lZ0RTZzX.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BcdAgHE-.css">
   </head>
   <body>
     <!--MJ start your coding here-->
@@ -15,9 +13,15 @@
      <h1 class="header">IP Lens</h1>
     </header>
     <main>
-      <section>
-        <input type="text" class="input" />
-        <button>&gt;</button>
+      <section class="section">
+        <input type="text" class="input" placeholder="search for any IP address or domain" /> 
+    <div class="icon">
+    <div class="svg">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+          </svg>
+          </div>
+    </div>
       </section>
       <section>
         <div class="map" id="map"></div>
@@ -45,5 +49,8 @@
           <p></p>
       </section>
     </main>
-  </body>
+    <!-- <script type="module" src="/main.js" defer></script> -->
+    </body>
+    </html>
+</body>
 </html>
