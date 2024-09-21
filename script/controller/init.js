@@ -1,7 +1,7 @@
 
 
 export default class Controller{
-  contructor(model, view){
+  constructor(model, view){
     this.model = model;
     this.view = view;
   }
