@@ -5,6 +5,10 @@ export default class Controller{
     this.model = model;
     this.view = view;
   }
+  run(){
+    console.log("ran");
+    console.log(this.model.test());
+  }
 }
 
 
