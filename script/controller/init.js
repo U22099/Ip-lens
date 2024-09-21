@@ -13,9 +13,6 @@ export default class Controller{
 
 
 
-
-
-
 /*
 Output example
 {
