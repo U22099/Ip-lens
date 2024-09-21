@@ -20,7 +20,7 @@ This project is a simple IP address tracker built using Vite and vanilla JavaScr
    git clone <repository-url>
 2. **Navigate to the project directory:**
    ```bash
-   cd ip-address-tracker
+   cd ip-lens
 4. **Install dependencies:**
    ```bash
    npm install
