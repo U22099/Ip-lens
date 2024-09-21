@@ -5,7 +5,7 @@ export default function handleData(data){
   if(data.bogon){
     showToast("warning", "Bogon IP", "IP is not accessible on internet");
     return data
-  } else if(data.error){
+  } else if(data.error.includes("ip")){
     showToast("error", "Invalid IP", "IP is invalid");
     return null
   } else {
@@ -23,40 +23,3 @@ export default function handleData(data){
     }
   }
 }
-
-/*
-Output example
-{
-  "ip": "0.0.0.0",
-  "city": "Lagos",
-  "region": "Lagos",
-  "country": "NG",
-  "loc": "8.521,92.647",
-  "org": "AS65152 MTN NIGERIA Communication limited",
-  "timezone": "Africa/Lagos"
-}
-{
-  "ip": "::1",
-  "bogon": true
-}
-{
-  "ip": "172.217.160.142",
-  "hostname": "maa03s29-in-f14.1e100.net",
-  "city": "Chennai",
-  "region": "Tamil Nadu",
-  "country": "IN",
-  "loc": "13.0878,80.2785",
-  "org": "AS15169 Google LLC",
-  "postal": "600001",
-  "timezone": "Asia/Kolkata"
-}
-{
-  "ip": "2001:0:200:3::1",
-  "city": "Solna",
-  "region": "Stockholm",
-  "country": "SE",
-  "loc": "59.3600,18.0009",
-  "postal": "105 04",
-  "timezone": "Europe/Stockholm"
-}
-*/
