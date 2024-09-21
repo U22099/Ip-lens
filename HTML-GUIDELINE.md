@@ -13,15 +13,21 @@ div
   -div
     -h1-/h1 (IP)
     -p-/p
+    -h1-/h1 (Hostname)
+    -p-/p
     -h1-/h1 (City)
     -p-/p
     -h1-/h1 (Region)
     -p-/p
     -h1-/h1 (Country)
     -p-/p
-    -h1-/h1 (Location)
+    -h1-/h1 (Latitude)
+    -p-/p
+    -h1-/h1 (Longitude)
     -p-/p
     -h1-/h1 (ISP Name)
+    -p-/p
+    -h1-/h1 (Postal Code)
     -p-/p
     -h1-/h1 (TimeZone)
   -/div
