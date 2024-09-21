@@ -19,8 +19,4 @@ export default class Model{
     }
     return handleData(data);
   }
-  async test(){
-    //const data = await this.fetch("255.255.255.255");
-    //console.log(data)
-  }
 }
