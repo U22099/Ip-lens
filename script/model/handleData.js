@@ -1,7 +1,6 @@
 export default function handleData(data){
-  console.log(data)
   if(data.bogon){
-    return null
+    return data
   } else if(data.error){
     return null
   } else {
@@ -9,6 +8,7 @@ export default function handleData(data){
       ip: data.ip,
       hostname: data.hostname,
       city: data.city,
+      region: data.region,
       country: data.country,
       latitude: data.loc.split(",")[0],
       longitude: data.loc.split(",")[1],
