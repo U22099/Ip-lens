@@ -9,6 +9,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 body {
   display: flex;
@@ -31,7 +33,7 @@ button {
   margin-top: 1rem;
   font-weight: 700;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  animation: fadeIn 2s ease;
+  animation: fadeIn 2s ease-in-out;
 }
 .input-section {
   display: flex;
@@ -54,7 +56,7 @@ button {
   background: none;
   backdrop-filter: blur(10px);
   animation-delay: 1s;
-  animation: leftRight 0.5s ease;
+  animation: leftRight 0.5s linear;
 }
 .input:focus,
 .input:focus-within {
@@ -71,7 +73,7 @@ button {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   animation-delay: 1s;
-  animation: rightLeft 0.5s ease;
+  animation: rightLeft 0.5s linear;
 }
 .icon:active {
   transform: scale(0.9);
@@ -94,7 +96,7 @@ button {
   color: black;
   background-color: white;
   border-radius: 15px;
-  animation: fadeIn 2s ease;
+  animation: fadeIn 2s ease-in-out;
 }
 .output {
   display: flex;
@@ -102,8 +104,6 @@ button {
   justify-content: center;
   flex-direction: column;
   max-width: clamp(80vw, 20vw, 10vw);
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
   gap: 10px;
 }
 .output h1 {
@@ -114,6 +114,12 @@ button {
 .output p {
   font-size: clamp(0.9em, 1.5em, 2.5em);
   font-weight: 900;
+}
+.footer {
+  max-width: clamp(90vw, 50vw, 30vw);
+  margin-top: 10px;
+  font-size: clamp(0.7em, 0.8em, 0.9em);
+  animation: fadeIn 3s ease-in-out;
 }
 @media (prefers-color-scheme: dark) {
   body {
@@ -128,6 +134,9 @@ button {
   .section {
     border: 2px solid white;
     background-color: black;
+    color: white;
+  }
+  .footer {
     color: white;
   }
 }
