@@ -32,6 +32,7 @@ body{
     top: 0;
     margin-left: 29.5em;
     margin-top: 6.3rem;
+    margin-top: 2.6rem;
     background-color: black;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -158,3 +159,4 @@ body{
     font-weight: 900;   
     margin-bottom: 0.5rem;
 }
+

@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Ip tracker" content="Demo Project of an Ip tracker">
     <link rel="stylesheet" href="style.css">
+    <meta name="description" content="A ip address tracker created by a team of 5 as demo project in preparation for the student hack team hackathon" />
     <title>Ip Lens</title>
   </head>
   <body>
@@ -14,17 +15,19 @@
      <h1 class="header">IP Tracker</h1>
     </header>
     <main>
-      <section>
-        <input type="text" class="input" placeholder="search for any IP address or domain" />
-       <div class="icon">
-        <div class="svg">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-          </svg>
+      <section class="section">
+        <input type="text" class="input" placeholder="search for any IP address or domain" id="input"/> 
+        <div class="icon" id="btn">
+          <div class="svg">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+          </div>
         </div>
-       </div>
       </section>
-
+      <section>
+        <div class="map" id="map"></div>
+      </section>
       <section class="section">
           <span class="span-1">
             <h1>IP ADDRESS</h1>
@@ -69,6 +72,8 @@
           </span>
       </section>
     </main>
-    <script type="module" src="/main.js" defer></script>
-  </body>
+    <script type="module" src="/main.js" defer></script> 
+    </body>
+    </html>
+</body>
 </html>
