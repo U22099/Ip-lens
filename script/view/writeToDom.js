@@ -11,7 +11,7 @@ export const writeToDom = (elementID, input, boolean) => {
     //If yes write to the value property
     element.value = input || "";
   } else {
-    //If no write to the innerText property
-    element.innerText = input || "";
+    //If no write to the innerHTML property
+    element.innerHTML = input || "";
   }
 };

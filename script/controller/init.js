@@ -56,6 +56,8 @@ export default class Controller {
   }
 
   display(result) {
+    //clears previous map
+    this.view.writeToDom("map", "")
     //Initalise the map passing in latitude and longitude as parameters
     this.model.map(result.latitude, result.longitude);
     //Loops throught the output id and write each result
