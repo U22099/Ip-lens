@@ -1,17 +1,17 @@
-import { getElement as getElementFunc } from './getElement.js';
-import { getFromDom as getFromDomFunc } from './getFromDom.js'
-import { writeToDom as writeToDomFunc } from './writeToDom.js'
+import { getElement as getElementFunc } from "./getElement.js";
+import { getFromDom as getFromDomFunc } from "./getFromDom.js";
+import { writeToDom as writeToDomFunc } from "./writeToDom.js";
 
 export default class View {
-  getElement() {
-    getElementFunc();
+  getElement(id) {
+    return getElementFunc(id);
   }
-  
-  getFromDom() {
-    getFromDomFunc();
+
+  getFromDom(id) {
+    return getFromDomFunc(id);
   }
-  
-  writeToDom() {
-    writeToDomFunc();
+
+  writeToDom(id, input, boolean = false) {
+    writeToDomFunc(id, input, boolean);
   }
 }

@@ -1,79 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="logo.jpg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="Ip tracker" content="Demo Project of an Ip tracker">
-    <link rel="stylesheet" href="style.css">
-    <meta name="description" content="A ip address tracker created by a team of 5 as demo project in preparation for the student hack team hackathon" />
-    <title>Ip Lens</title>
-  </head>
-  <body>
-    <!--MJ start your coding here-->
-    <header>
-     <h1 class="header">IP Tracker</h1>
-    </header>
-    <main>
-      <section class="section">
-        <input type="text" class="input" placeholder="search for any IP address or domain" id="input"/> 
-        <div class="icon" id="btn">
-          <div class="svg">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                </svg>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/jpeg" href="logo.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="A ip address tracker created by a team of 5 as demo project in preparation for the student hack team hackathon" />
+  <title>Ip Lens</title>
+</head>
+
+<body>
+  <!--MJ start your coding here-->
+  <header>
+    <h1 class="header">IP Lens</h1>
+  </header>
+  <main>
+    <section class="input-section">
+      <input type="text" class="input" placeholder="Search for any IP (IPv4-IPv6)" id="input"/>
+      <button class="icon" id="btn">
+        <div class="svg">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+          </svg>
         </div>
-      </section>
-      <section>
-        <div class="map" id="map"></div>
-      </section>
-      <section class="section">
-          <span class="span-1">
-            <h1>IP ADDRESS</h1>
-            <p>102.89.34.163</p>
-          </span>
-        <span class="span-2">
-          <h1>Hostname</h1>
-          <p>ip-api.com</p>
-        </span>
-        <span class="span-3">
-          <h1>City</h1>
-          <p> Berlin, GER </p>
-        </span>
-         <span class="span-4">
-          <h1>Region</h1>
-          <p> Eu-central-1</p>
-         </span>
-          <span class="span-5">
-            <h1>Country</h1>
-            <p>Germany</p>
-          </span>
-          <span class="span-6">
-            <h1>Latitude</h1>
-            <p>52.5200</p>
-          </span>
-           <span class="span-7">
-            <h1>Longitude</h1>
-            <p>13.4050</p>
-           </span>
-           
-          <span class="span-8">
-            <h1>ISP Name</h1>
-          <p>Deutsche Telecom AG</p>
-          </span>
-          <span class="span-9">
-            <h1>Postal Code</h1>
-          <p>PLZ 101115</p>
-          </span>
-          <span class="span-10">
-            <h1>Timezone</h1>
-            <p>CET(UTC+2)</p> 
-          </span>
-      </section>
-    </main>
-    <script type="module" src="/main.js" defer></script> 
-    </body>
-    </html>
+      </button>
+    </section>
+    <section>
+      <div class="map" id="map"></div>
+    </section>
+    <section class="section">
+      <span class="output">
+        <h1>IP ADDRESS</h1>
+        <p id="ip"></p>
+      </span>
+      <span class="output">
+        <h1>Hostname</h1>
+        <p id="hostname"></p>
+      </span>
+      <span class="output">
+        <h1>City</h1>
+        <p id="city"></p>
+      </span>
+      <span class="output">
+        <h1>Region</h1>
+        <p id="region"></p>
+      </span>
+      <span class="output">
+        <h1>Country</h1>
+        <p id="country"></p>
+      </span>
+      <span class="output">
+        <h1>Latitude</h1>
+        <p id="latitude"></p>
+      </span>
+      <span class="output">
+        <h1>Longitude</h1>
+        <p id="longitude"></p>
+      </span>
+      <span class="output">
+        <h1>ISP Name</h1>
+        <p id="org"></p>
+      </span>
+      <span class="output">
+        <h1>Postal Code</h1>
+        <p id="postal"></p>
+      </span>
+      <span class="output">
+        <h1>Timezone</h1>
+        <p id="timezone"></p>
+      </span>
+    </section>
+  </main>
+  <script type="module" src="/main.js" defer></script>
 </body>
+
+</html>
+</body>
+
 </html>

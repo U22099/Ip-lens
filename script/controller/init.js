@@ -1,27 +1,63 @@
-
-export default class Controller{
-  constructor(model, view){
+export default class Controller {
+  constructor(model, view) {
     this.model = model;
     this.view = view;
     this.btn = this.view.getElement("btn");
-    this.output = ["ip", "hostname", "city", "region", "country", "latitude", "longitude", "org", "postal", "timezone"]
+    this.output = [
+      "ip",
+      "hostname",
+      "city",
+      "region",
+      "country",
+      "latitude",
+      "longitude",
+      "org",
+      "postal",
+      "timezone",
+    ];
   }
-  run(){
-    this.btn.addEventListener("click", async ()=>{
-      const ip = this.view.getFromDom("input");
-      const result = await this.model.fetch(ip);
-      if(!result) clear();
-      display(result);
-     })
+
+  async init() {
+    this.load();
+    const result = await this.model.fetch();
+    if (!result) {
+      this.clear();
+    } else if (result.bogon) {
+      this.view.writeToDom("ip", result.ip);
+    } else {
+      this.display(result);
+    }
+    this.btn.addEventListener("click", async () => await this.run());
   }
-  display(result){
-    this.output.map(name => {
+  async run() {
+    this.load();
+    const ip = this.view.getFromDom("input");
+    const result = await this.model.fetch(ip);
+    if (!result) {
+      this.clear();
+    } else if (result.bogon) {
+      this.view.writeToDom("ip", result.ip);
+    } else {
+      this.display(result);
+    }
+  }
+
+  display(result) {
+    this.model.createMap(result.latitude, result.longitude)
+    this.output.forEach((name) => {
       this.view.writeToDom(name, result[name]);
-    })
+    });
   }
-  clear(){
-    this.output.map(name => {
+
+  load() {
+    this.output.map((name) => {
+      this.view.writeToDom(name, "Loading...");
+    });
+  }
+
+  clear() {
+    this.output.map((name) => {
       this.view.writeToDom(name, "");
-    })
+    });
   }
 }
