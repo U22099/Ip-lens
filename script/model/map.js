@@ -14,7 +14,7 @@ export default function createMap(lat, long){
     target: 'map',
     view: new View({
       center: fromLonLat([long, lat]),
-      zoom: 10,
+      zoom: 12,
     }),
   });
   return map
