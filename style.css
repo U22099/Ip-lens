@@ -9,6 +9,13 @@ body{
     width: 800px;
     background-image: radial-gradient(cadetblue,cyan);
 }
+.header{
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: 400;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
 .input{
    margin-top: 3em;
    margin-left: 30%;
@@ -16,6 +23,7 @@ body{
    border-radius: 15px;
    width: 37%;
    position: relative;
+   margin-bottom: 2rem;
 }
  .icon{
     width: 4rem;
@@ -23,6 +31,7 @@ body{
     position: absolute;
     top: 0;
     margin-left: 29.5em;
+    margin-top: 6.3rem;
     margin-top: 2.6rem;
     background-color: black;
     border-top-right-radius: 10px;
@@ -35,3 +44,119 @@ body{
    margin-left: 1rem;
    margin-top: 0.5rem;
  }
+
+ .section{
+    text-align: center;
+    border: 1px solid rgb(175, 162, 162);
+    width: 50%;
+    margin: auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 0px 1px white;
+ }
+ .span-1 h1{
+    margin-top: 0.5rem;
+    font-size: small;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: gray;
+ }
+ .span-1 p{
+    font-size: medium;
+    font-weight: 900;
+ }
+ .span-2 h1{
+    font-size: small;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: gray;
+    margin-top: 0.5em;
+ }
+ .span-2 p{
+    font-size: medium;
+    font-weight: 900;
+ }
+ .span-3 h1{
+    font-size: small;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: gray;
+    margin-top: 0.5em;
+ }
+ .span-3 p{
+    font-size: medium;
+    font-weight: 900;
+ }
+ .span-4   h1{
+    font-size: small;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: gray;
+    margin-top: 0.5em;
+ }
+ .span-4 p{
+    font-size: medium;
+    font-weight: 900;
+ }
+ .span-5  h1{
+    font-size: small;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: gray;
+    margin-top: 0.5em;
+ }
+ .span-5 p{
+    font-size: medium;
+    font-weight: 900;
+ }
+ .span-6   h1{
+    font-size: small;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: gray;
+    margin-top: 0.5em;
+ }
+ .span-6 p{
+    font-size: medium;
+    font-weight: 900;
+ }
+.span-7 h1{
+    font-size: small;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: gray;
+    margin-top: 0.5em;
+    
+}
+.span-7 p{
+    font-size: medium;
+    font-weight: 900;   
+}
+.span-8 h1{
+    font-size: small;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: gray;
+    margin-top: 0.5em;
+    
+}
+.span-8 p{
+    font-size: medium;
+    font-weight: 900;   
+}
+.span-9 h1{
+    font-size: small;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: gray;
+    margin-top: 0.5em;
+    
+}
+.span-9 p{
+    font-size: medium;
+    font-weight: 900;   
+}
+.span-10 h1{
+    font-size: small;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: gray;
+    margin-top: 0.5em;
+    
+}
+.span-10 p{
+    font-size: medium;
+    font-weight: 900;   
+    margin-bottom: 0.5rem;
+}
+
