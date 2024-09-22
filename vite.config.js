@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/Ip-lens/',
+  baseUrl: '/Ip-lens/',
   build: {
     sourcemap: true,
   },
