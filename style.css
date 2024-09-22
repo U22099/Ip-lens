@@ -1,3 +1,4 @@
+/* Styling for Map from Open Layers */
 @import "node_modules/ol/ol.css";
 .map {
   width: 100%;
@@ -5,6 +6,7 @@
   border-radius: 20px;
   margin-bottom: 20px;
 }
+/* General Styling */
 * {
   margin: 0;
   padding: 0;
@@ -121,6 +123,7 @@ button {
   font-size: clamp(0.7em, 0.8em, 0.9em);
   animation: fadeIn 3s ease-in-out;
 }
+/* Darkmode support */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #050505;
@@ -140,6 +143,7 @@ button {
     color: white;
   }
 }
+/* Responsive Styling */
 @media (min-width: 815px) {
   .section {
     flex-direction: row;
@@ -148,6 +152,7 @@ button {
     padding: 20px 30px;
   }
 }
+/* Animation Keyframes */
 @keyframes fadeIn {
   from {
     opacity: 0;

@@ -5,6 +5,7 @@ import View from "ol/View.js";
 import { fromLonLat } from "ol/proj.js";
 
 export default function createMap(lat, long) {
+  //initialises a new Map adn reference the map element
   const map = new Map({
     layers: [
       new TileLayer({
@@ -17,5 +18,6 @@ export default function createMap(lat, long) {
       zoom: 12,
     }),
   });
+  //Returns map
   return map;
 }

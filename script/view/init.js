@@ -3,6 +3,7 @@ import { getFromDom as getFromDomFunc } from "./getFromDom.js";
 import { writeToDom as writeToDomFunc } from "./writeToDom.js";
 
 export default class View {
+  //Imports and initialise each function
   getElement(id) {
     return getElementFunc(id);
   }

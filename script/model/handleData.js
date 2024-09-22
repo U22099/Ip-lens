@@ -1,14 +1,16 @@
 import showToast from "./showToast";
 
-export default function handleData(data){
-  console.log(data);
-  if(data.bogon){
+export default function handleData(data) {
+  //Checks if the data is bogon(local ip) and displays a warning toast
+  if (data.bogon) {
     showToast("warning", "Bogon IP", "IP is not accessible on internet");
-    return data
-  } else if(data.error){
+    return data;
+  } else if (data.error) {
+    //Checks if the data as error(invalid ip) and displays an error toast
     showToast("error", "Invalid IP", "IP is invalid");
-    return null
+    return null;
   } else {
+    //Returns needed outputs
     return {
       ip: data.ip,
       hostname: data.hostname,
@@ -19,7 +21,7 @@ export default function handleData(data){
       longitude: data.loc.split(",")[1],
       org: data.org,
       postal: data.postal,
-      timezone: data.timezone
-    }
+      timezone: data.timezone,
+    };
   }
 }
