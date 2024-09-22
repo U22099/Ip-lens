@@ -1,8 +1,59 @@
-export default class Controller {
+ export default class Controller {
   //Defining a constructor with the model and view class
   constructor(model, view) {
     this.model = model;
     this.view = view;
+    //Theme Elements
+    this.theme1 = this.view.getElement("theme1");
+    this.theme2 = this.view.getElement("theme2");
+    this.themeVar = [
+      "--theme-body",
+      "--theme-body-dark",
+      "--theme-button",
+      "--theme-button-dark",
+      "--theme-button-border",
+      "--theme-input-border",
+      "--theme-section",
+      "--theme-section-dark",
+      "--theme-section-color",
+      "--theme-section-color-dark",
+      "--theme-text-color",
+      "--theme-text-color-dark",
+      "--theme1",
+      "--theme2"
+    ];
+    this.themeA = [
+      "linear-gradient(to right, aqua, purple)",
+      "linear-gradient(to right, black, darkblue)",
+      "linear-gradient(to left, purple, aqua)",
+      "linear-gradient(to right, blue, darkblue)",
+      "aqua",
+      "darkblue",
+      "linear-gradient(to left, darkblue, aqua)",
+      "linear-gradient(to right, #050505, darkblue)",
+      "white",
+      "white",
+      "white",
+      "white",
+      "2px solid goldenrod",
+      "none"
+    ];
+    this.themeB = [
+      "white",
+      "black",
+      "black",
+      "black",
+      "gray",
+      "gray",
+      "white",
+      "black",
+      "black",
+      "white",
+      "black",
+      "white",
+      "none",
+      "2px solid goldenrod"
+    ];
     //Access the button using view.getElement method
     this.btn = this.view.getElement("btn");
     //An array of output id
@@ -36,6 +87,9 @@ export default class Controller {
     }
     //Adds an event listener to the button to listen for a click event
     this.btn.addEventListener("click", async () => await this.run());
+    //Adding event listener to the theme buttons
+    this.theme1.addEventListener("click", ()=> this.changeTheme(1));
+    this.theme2.addEventListener("click", ()=> this.changeTheme(2));
   }
   //funtion to run onclick of the button
   async run() {
@@ -78,5 +132,22 @@ export default class Controller {
     this.output.map((name) => {
       this.view.writeToDom(name, "");
     });
+  }
+  
+  //To change the pages Theme
+  changeTheme(no){
+    console.log("called")
+    switch(no){
+      case 1:
+        for(let i = 0; i < this.themeVar.length; i++){
+          this.view.changeCssVar(this.themeVar[i], this.themeA[i]);
+        }
+        break;
+      case 2:
+        for(let i = 0; i < this.themeVar.length; i++){
+          this.view.changeCssVar(this.themeVar[i], this.themeB[i]);
+        }
+        break;
+    }
   }
 }

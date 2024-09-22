@@ -6,6 +6,48 @@
   border-radius: 20px;
   margin-bottom: 20px;
 }
+/* Theme */
+:root{
+  --theme-body: linear-gradient(to right, aqua, purple);
+  --theme-body-dark: linear-gradient(to right, black, darkblue);
+  --theme-button: linear-gradient(to left, purple, aqua);
+  --theme-button-dark: linear-gradient(to right, blue, darkblue);
+  --theme-button-border: aqua;
+  --theme-input-border: darkblue;
+  --theme-section: linear-gradient(to left, darkblue, aqua);
+  --theme-section-dark: linear-gradient(to right, #050505, darkblue);
+  --theme-section-color: white;
+  --theme-section-color-dark: white;
+  --theme-text-color: white;
+  --theme-text-color-dark: white;
+  --theme1: 2px solid goldenrod;
+  --theme2: none;
+}
+.theme{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  align-self: start;
+  width: 120px;
+  gap: 20px;
+  background: black;
+  border-radius: 10px;
+  padding: 10px;
+}
+.theme p{
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+.theme :first-child{
+  background: linear-gradient(to right, aqua, purple);
+  border: var(--theme1);
+}
+.theme :last-child{
+  background: white;
+  border: var(--theme2);
+}
 /* General Styling */
 * {
   margin: 0;
@@ -21,7 +63,7 @@ body {
   align-items: center;
   padding: 40px 0px;
   min-height: 100vh;
-  background-color: #f5f5f5;
+  background: var(--theme-body);
   animation: slideIn 1s linear;
 }
 input,
@@ -30,7 +72,7 @@ button {
   border: none;
 }
 .header {
-  color: black;
+  color: var(--theme-text-color);
   text-align: center;
   margin-top: 1rem;
   font-weight: 700;
@@ -53,10 +95,10 @@ button {
   border-radius: 15px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
-  border: 1px solid gray;
-  color: black;
+  border: 1px solid var(--theme-input-border);
+  color: white;
   background: none;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
   animation-delay: 1s;
   animation: leftRight 0.5s linear;
 }
@@ -70,16 +112,17 @@ button {
   justify-content: center;
   width: 5rem;
   height: 100%;
-  background-color: black;
-  border: 1px solid gray;
+  background: var(--theme-button);
+  border: 1px solid var(--theme-button-border);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   animation-delay: 1s;
   animation: rightLeft 0.5s linear;
   cursor: pointer;
+  transition: 0.5s ease-in;
 }
 .icon:active {
-  transform: scale(0.9);
+  transform: scale(0.8);
 }
 .svg {
   color: white;
@@ -96,8 +139,8 @@ button {
   border: 2px solid black;
   width: clamp(90vw, 50vw, 30vw);
   margin: auto;
-  color: black;
-  background-color: white;
+  color: var(--theme-section-color);
+  background: var(--theme-section);
   border-radius: 15px;
   animation: fadeIn 2s ease-in-out;
 }
@@ -113,7 +156,7 @@ button {
 .output h1 {
   font-size: clamp(0.9em, 1.5em, 2em);
   text-decoration: underline;
-  color: gray;
+  color: goldenrod;
 }
 .output p {
   font-size: clamp(0.9em, 1.5em, 2.5em);
@@ -125,21 +168,32 @@ button {
   font-size: clamp(0.7em, 0.8em, 0.9em);
   animation: fadeIn 3s ease-in-out;
 }
+
 /* Darkmode support */
 @media (prefers-color-scheme: dark) {
+  .theme{
+    background: white;
+  }
+  .theme :last-child{
+    background: black;
+  }
   body {
-    background-color: #050505;
+    background: var(--theme-body-dark);
   }
   .header {
-    color: white;
+     color: var(--theme-text-color-dark);
   }
   .input {
     color: white;
   }
+  .icon {
+    border: 1px solid var(--theme-button-border);
+    background: var(--theme-button-dark);
+  }
   .section {
     border: 2px solid white;
-    background-color: black;
-    color: white;
+    background: var(--theme-section-dark);
+    color: var(--theme-section-color-dark);
   }
   .footer {
     color: white;
