@@ -15,6 +15,11 @@ export default class Model {
     }
     const data = await fetchIP(IP);
     if (!data) {
+      showToast(
+        "error",
+        "Error",
+        "An error occurred, Please try again"
+      );
       //Returns null if there's an error
       return null;
     } else if (data.status === 429) {

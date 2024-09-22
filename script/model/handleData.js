@@ -7,7 +7,7 @@ export default function handleData(data) {
     return data;
   } else if (data.error) {
     //Checks if the data as error(invalid ip) and displays an error toast
-    showToast("error", "Invalid IP", "IP is invalid");
+    showToast("error", "Invalid IP", data.error.message);
     return null;
   } else {
     //Returns needed outputs
