@@ -5,7 +5,7 @@ import validateIP from "./validateIP";
 import showToast from "./showToast";
 
 export default class Model {
-  async fetch(IP = null) {
+  async fetch(IP = "default") {
     //Calls validate function
     const valid = validateIP(IP);
     if (IP && !valid) {

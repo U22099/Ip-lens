@@ -1,10 +1,10 @@
 //Function to fetch api data
-export default async function fetchIP(IP = null) {
+export default async function fetchIP(IP) {
   try {
     //Api token
     const token = "89d4c270ab87af";
     let url;
-    if (IP === null) {
+    if (IP === "default") {
       //Set url for default ip if no ip is input
       url = `https://ipinfo.io/?token=${token}`;
     } else {
