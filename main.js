@@ -1,4 +1,3 @@
-import "./style.css";
 import Model from "./script/model/init.js";
 import View from "./script/view/init.js";
 import Controller from "./script/controller/init.js";
