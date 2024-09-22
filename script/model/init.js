@@ -8,7 +8,7 @@ export default class Model {
   async fetch(IP = "default") {
     //Calls validate function
     const valid = validateIP(IP);
-    if (IP && !valid) {
+    if (!valid && IP !== "default") {
       //Shows an error toast if input doesnt pass the validation
       showToast("error", "Invalid Input", "Input must be an IPv4 or IPv6");
       return null;
