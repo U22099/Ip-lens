@@ -108,6 +108,7 @@ button {
   flex-direction: column;
   max-width: clamp(80vw, 20vw, 10vw);
   gap: 10px;
+  word-break: break-word;
 }
 .output h1 {
   font-size: clamp(0.9em, 1.5em, 2em);
