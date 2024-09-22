@@ -76,6 +76,7 @@ button {
   border-bottom-right-radius: 10px;
   animation-delay: 1s;
   animation: rightLeft 0.5s linear;
+  cursor: pointer;
 }
 .icon:active {
   transform: scale(0.9);
