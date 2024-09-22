@@ -1,6 +1,6 @@
 import fetchIP from "./fetchIP";
 import handleData from "./handleData";
-import createMal from "./createMap";
+import createMap from "./map";
 import validateIP from "./validateIP";
 import showToast from "./showToast";
 

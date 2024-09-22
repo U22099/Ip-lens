@@ -43,7 +43,7 @@ export default class Controller {
   }
 
   display(result) {
-    this.model.createMap(result.latitude, result.longitude)
+    this.model.map(result.latitude, result.longitude)
     this.output.forEach((name) => {
       this.view.writeToDom(name, result[name]);
     });
