@@ -96,7 +96,7 @@ button {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
   border: 1px solid var(--theme-input-border);
-  color: white;
+  color: var(--theme-text-color);
   background: none;
   backdrop-filter: blur(20px);
   animation-delay: 1s;
@@ -163,6 +163,7 @@ button {
   font-weight: 900;
 }
 .footer {
+  color: var(--theme-text-color);
   max-width: clamp(90vw, 50vw, 30vw);
   margin-top: 10px;
   font-size: clamp(0.7em, 0.8em, 0.9em);
@@ -184,7 +185,7 @@ button {
      color: var(--theme-text-color-dark);
   }
   .input {
-    color: white;
+     color: var(--theme-text-color-dark);
   }
   .icon {
     border: 1px solid var(--theme-button-border);
@@ -196,7 +197,7 @@ button {
     color: var(--theme-section-color-dark);
   }
   .footer {
-    color: white;
+    color: var(--theme-text-color-dark);
   }
 }
 /* Responsive Styling */
