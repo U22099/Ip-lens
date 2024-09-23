@@ -1,4 +1,6 @@
- export default class Controller {
+import { themeVar, themeA, themeB } from './theme.js';
+
+export default class Controller {
   //Defining a constructor with the model and view class
   constructor(model, view) {
     this.model = model;
@@ -6,54 +8,9 @@
     //Theme Elements
     this.theme1 = this.view.getElement("theme1");
     this.theme2 = this.view.getElement("theme2");
-    this.themeVar = [
-      "--theme-body",
-      "--theme-body-dark",
-      "--theme-button",
-      "--theme-button-dark",
-      "--theme-button-border",
-      "--theme-input-border",
-      "--theme-section",
-      "--theme-section-dark",
-      "--theme-section-color",
-      "--theme-section-color-dark",
-      "--theme-text-color",
-      "--theme-text-color-dark",
-      "--theme1",
-      "--theme2"
-    ];
-    this.themeA = [
-      "linear-gradient(to right, aqua, purple)",
-      "linear-gradient(to right, black, darkblue)",
-      "linear-gradient(to left, purple, aqua)",
-      "linear-gradient(to right, blue, darkblue)",
-      "aqua",
-      "darkblue",
-      "linear-gradient(to left, darkblue, aqua)",
-      "linear-gradient(to right, #050505, darkblue)",
-      "white",
-      "white",
-      "white",
-      "white",
-      "2px solid goldenrod",
-      "none"
-    ];
-    this.themeB = [
-      "white",
-      "black",
-      "black",
-      "black",
-      "gray",
-      "gray",
-      "white",
-      "black",
-      "black",
-      "white",
-      "black",
-      "white",
-      "none",
-      "2px solid goldenrod"
-    ];
+    this.themeVar = themeVar;
+    this.themeA = themeA;
+    this.themeB = themeB
     //Access the button using view.getElement method
     this.btn = this.view.getElement("btn");
     //An array of output id

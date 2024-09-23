@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate-pwa-assets": "pwa-assets-generator --preset minimal-2023 public/Logo.jpg"
   },
   "devDependencies": {
     "vite": "^5.4.1"
@@ -15,6 +16,7 @@
   "dependencies": {
     "gh-pages": "^6.1.1",
     "ol": "^10.1.0",
-    "simple-notify": "^1.0.4"
+    "simple-notify": "^1.0.4",
+    "vite-plugin-pwa": "^0.20.5"
   }
 }
