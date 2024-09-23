@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "generate-pwa-assets": "pwa-assets-generator --preset minimal-2023 public/Logo.jpg"
+    "generate-pwa-assets": "pwa-assets-generator --preset minimal-2023 public/logo.jpg"
   },
   "devDependencies": {
     "vite": "^5.4.1"
