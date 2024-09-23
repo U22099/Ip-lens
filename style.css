@@ -43,10 +43,12 @@
 .theme :first-child{
   background: linear-gradient(to right, aqua, purple);
   border: var(--theme1);
+  transition: 0.2s linear;
 }
 .theme :last-child{
   background: white;
   border: var(--theme2);
+  transition: 0.2s linear;
 }
 /* General Styling */
 * {
@@ -55,6 +57,7 @@
   box-sizing: border-box;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+  transition: 1s linear;
 }
 body {
   display: flex;
