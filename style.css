@@ -2,9 +2,11 @@
 @import "node_modules/ol/ol.css";
 .map {
   width: 100%;
-  height: 50vh;
-  border-radius: 20px;
+  height: clamp(50vh, 50vh, 40vh);
   margin-bottom: 20px;
+}
+.map *{
+  border-radius: 10px !important;
 }
 /* Theme */
 :root{
@@ -125,7 +127,7 @@ button {
   transition: 0.5s ease-in;
 }
 .icon:active {
-  transform: scale(0.8);
+  transform: scale(0.9);
 }
 .svg {
   color: white;
@@ -185,7 +187,7 @@ button {
     background: var(--theme-body-dark);
   }
   .header {
-     color: var(--theme-text-color-dark);
+       color: var(--theme-text-color-dark);
   }
   .input {
      color: var(--theme-text-color-dark);
