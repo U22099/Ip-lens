@@ -14,7 +14,7 @@ export default defineConfig({
         start_url: '/Ip-lens',
         scope: '/',
         orientation: 'portrait',
-        theme_color: 'purple',
+        theme_color: '#000000',
         icons: [
           {
             src: "pwa-64x64.png",
