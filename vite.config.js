@@ -9,12 +9,12 @@ export default defineConfig({
         name: 'IP Lens',
         short_name: 'IP Lens',
         description: 'Ip address tracker with map',
-        background_color: 'black',
+        background_color: '#000',
         display: 'standalone',
         start_url: '/Ip-lens',
         scope: '/',
         orientation: 'portrait',
-        theme_color: '#000000',
+        theme_color: '#000',
         icons: [
           {
             src: "pwa-64x64.png",
